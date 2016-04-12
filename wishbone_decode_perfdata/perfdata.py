@@ -67,7 +67,7 @@ class PerfData(Actor):
         self.regex = re.compile('(.*?)(\D+)$')
 
     def preHook(self):
-        if self.sanitize_hostname:
+        if self.kwargs.sanitize_hostname:
             self.replacePeriod = self.__doReplacePeriod
         else:
             self.replacePeriod = self.__doNoReplacePeriod
@@ -89,7 +89,6 @@ class PerfData(Actor):
             # name and value
             (metric_name, metric_value) = metric.split('=')
             metric_name = self.__filter(metric_name)
-
             # metric time
             metric_timet = d["timet"]
 
@@ -111,6 +110,7 @@ class PerfData(Actor):
 
         r = {}
         d = data.split('\t')
+
         for item in d:
             item_parts = item.split('::')
             if len(item_parts) == 2:

@@ -24,9 +24,9 @@
 
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
-import sys, os
+import sys
 
-PROJECT = 'wishbone_encode_perfdata'
+PROJECT = 'wishbone_decode_perfdata'
 VERSION = '1.0.0'
 
 install_requires = [
@@ -56,14 +56,14 @@ setup(
     name=PROJECT,
     version=VERSION,
 
-    description='A Wishbone encode module to convert Nagios perfdata to the internal metric format.',
+    description='A Wishbone decode module to convert Nagios perfdata to the internal metric format.',
     long_description=long_description,
 
     author='Jelle Smet',
     author_email='development@smetj.net',
 
-    url='https://github.com/smetj/wishbone-encode-perfdata',
-    download_url='https://github.com/smetj/wishbone-encode-perfdata/tarball/master',
+    url='https://github.com/smetj/wishbone-decode-perfdata',
+    download_url='https://github.com/smetj/wishbone-decode-perfdata/tarball/master',
     classifiers=['Development Status :: 5 - Production/Stable',
                  'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
                  'Programming Language :: Python',
@@ -85,8 +85,8 @@ setup(
     packages=find_packages(),
     zip_safe=False,
     entry_points={
-        'wishbone.encode': [
-            'perfdata=wishbone_encode_perfdata:PerfData',
+        'wishbone.decode': [
+            'perfdata=wishbone_decode_perfdata:PerfData',
         ]
     }
 )
