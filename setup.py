@@ -27,7 +27,7 @@ from setuptools.command.test import test as TestCommand
 import sys
 
 PROJECT = 'wishbone_decode_perfdata'
-VERSION = '1.0.0'
+VERSION = '1.1.0'
 
 install_requires = [
     'wishbone>=2.1.4',
@@ -68,6 +68,7 @@ setup(
                  'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
                  'Programming Language :: Python',
                  'Programming Language :: Python :: 2.7',
+                 'Programming Language :: Python :: 3.5',
                  'Programming Language :: Python :: Implementation :: PyPy',
                  'Intended Audience :: Developers',
                  'Intended Audience :: System Administrators',
